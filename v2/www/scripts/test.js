@@ -107,11 +107,8 @@ function deck() {
 
 
 function retIndex(el) {
-    for (var i = 0; i < state.pictures.length; i++) {
-       /*
-        return state.pictures[i].id == el ? i : null;
-       */
-        if (state.pictures[i].id == el) {
+    for (var i = 0; i < state.pictures.length; i++) {       
+        if (state.pictures[i].id === el) {
             return i;
         }
     }   
@@ -129,7 +126,7 @@ function coupleOfCards() {
    
     window.alert = navigator.notification.alert;
 
-    if (cards[retIndex(this.id)].status == false) {
+    if (cards[retIndex(this.id)].status === false) {
         state.numClickCard++;
     }
     
@@ -139,7 +136,7 @@ function coupleOfCards() {
     }   
     state.pictures[retIndex(this.id)].style.backgroundImage = "url('images/" + this.name + ".jpg')";
     
-    if (state.numClickCard == 2) {
+    if (state.numClickCard === 2) {
         state.id2 = this.id;
         if (cards[retIndex(state.id1)].name == this.name) {
             cards[retIndex(this.id)].status = true;
