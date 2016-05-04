@@ -1,12 +1,11 @@
 ﻿
 // name - это номера картинок, они повторяются. может быть только ровно два одинаковых имени.
 
-//var cards =[];
     var state = {
         numClickCard: 0,
         field: {
-            width: undefined,//wp
-            heigh: undefined//hp
+            width: undefined,
+            heigh: undefined
         },
         cards:[],
         pictures:[],
@@ -18,7 +17,7 @@
 function play() {
     //window.alert = navigator.notification.alert;
     //window.alert("go!");
-    state.id1 = this.id;
+    //state.id1 = this.id;
     document.body.innerHTML = '<h1 class="rb1">Выберите размеры поля</h1><div class="rb"><input type="radio" name="r1" value="1">4X4<br><input type="radio" class="rb" name="r1" value="2">5X4<br><input type="radio" class="rb" name="r1" value="3">4X3<br><input type="radio" class="rb" name="r1" value="4">5X6<br><input type="radio" class="rb" name="r1" value="5">5X8<br></div><h1><input type="button" value="ops" name="play" onclick="deck()" width="10" height="20" /></h1>';
 }
 
@@ -130,9 +129,7 @@ function coupleOfCards() {
     if (state.cards[retIndex(this.id)].status === false) {
         state.numClickCard++;
     }
-    if (state.numClickCard > 2) {
-        return false;
-    }
+    
     if (state.numClickCard === 1) {
         state.id1 = this.id;
         state.cards[retIndex(this.id)].status = true;
