@@ -7,7 +7,9 @@ body {
     font-family: 'RobotoRegular', 'Droid Sans', 'Segoe UI', Segoe, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
     font-size:12px;
 }
-.play1 {
+
+.play {
+
     vertical-align:middle;
     height:60px;
     width:100px;
