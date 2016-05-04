@@ -12,12 +12,9 @@
         id1: undefined,
         id2: undefined
     }
-  //  document.getElementsById("p").addEventListener("onclick", play);
+ 
 
 function play() {
-    //window.alert = navigator.notification.alert;
-    //window.alert("go!");
-    //state.id1 = this.id;
     document.body.innerHTML = '<h1 class="rb1">Выберите размеры поля</h1><div class="rb"><input type="radio" name="r1" value="1">4X4<br><input type="radio" class="rb" name="r1" value="2">5X4<br><input type="radio" class="rb" name="r1" value="3">4X3<br><input type="radio" class="rb" name="r1" value="4">5X6<br><input type="radio" class="rb" name="r1" value="5">5X8<br></div><h1><input type="button" value="ops" name="play" onclick="deck()" width="10" height="20" /></h1>';
 }
 
@@ -40,14 +37,13 @@ function radioClick() {
         }
     }
 }
+
 function Card(cardID, status) {
     this.status = status;//состояние карточки(нажата/не нажата)
     this.l = cardID;//id (номер картинки)
     this.name = name;
 }
-/*
-массив соответствия id и name
-*/
+//массив соответствия id и name
 function idName(arr,n)
 {
     for (var i = 1; i <= n; i++) {        
@@ -59,10 +55,7 @@ function idName(arr,n)
         }
     }   
 }
-/**
-раскладывает карты в начальное состояние(все закрыты)
-*/
-
+//раскладывает карты в начальное состояние(все закрыты)
 
 function deck() {
     radioClick();
@@ -82,9 +75,7 @@ function deck() {
     for (var i = 0; i < state.field.heigh; i++) {
         tr = document.createElement("tr");
         for (var j = 0; j < state.field.width; j++) {
-            /**
-            *создаёт поле
-            */
+          //создаёт поле
             td = document.createElement("td");            
             img = document.createElement('img');
             img.style.backgroundImage = "url('images/down.jpg')";
