@@ -1,13 +1,14 @@
 ﻿
 // name - это номера картинок, они повторяются. может быть только ровно два одинаковых имени.
 
-var cards =[];
+//var cards =[];
     var state = {
         numClickCard: 0,
         field: {
             width: undefined,//wp
             heigh: undefined//hp
         },
+        cards:[],
         pictures:[],
         id1: undefined,
         id2: undefined
@@ -94,8 +95,8 @@ function deck() {
             img.id = temp[temp1];//присваивает случайные id
             img.name = arr[img.id];
             temp.splice(temp1 , 1);//извлекает из массива уже отданный id(для избежания повторений)
-            cards.push(new Card(img.id, false));
-            cards[count].name = arr[img.id];//номер картинки которая у неё будет
+            state.cards.push(new Card(img.id, false));
+            state.cards[count].name = arr[img.id];//номер картинки которая у неё будет
             td.appendChild(img)
             tr.appendChild(td);
             count++;
@@ -119,27 +120,29 @@ function downCard() {
     //переварачивает карты, если не совпали   
    state.pictures[retIndex(state.id1)].style.backgroundImage = "url('images/down.jpg')";
    state.pictures[retIndex(state.id2)].style.backgroundImage = "url('images/down.jpg')";
-   cards[retIndex(state.id1)].status = false;
+   state.cards[retIndex(state.id1)].status = false;
 }
 
 function coupleOfCards() {
    
     window.alert = navigator.notification.alert;
 
-    if (cards[retIndex(this.id)].status === false) {
+    if (state.cards[retIndex(this.id)].status === false) {
         state.numClickCard++;
     }
-    
+    if (state.numClickCard > 2) {
+        return false;
+    }
     if (state.numClickCard === 1) {
         state.id1 = this.id;
-        cards[retIndex(this.id)].status = true;
+        state.cards[retIndex(this.id)].status = true;
     }   
     state.pictures[retIndex(this.id)].style.backgroundImage = "url('images/" + this.name + ".jpg')";
     
     if (state.numClickCard === 2) {
         state.id2 = this.id;
-        if (cards[retIndex(state.id1)].name == this.name) {
-            cards[retIndex(this.id)].status = true;
+        if (state.cards[retIndex(state.id1)].name == this.name) {
+            state.cards[retIndex(this.id)].status = true;
             state.numClickCard = 0;
         } else {
             setTimeout(downCard, 700);
