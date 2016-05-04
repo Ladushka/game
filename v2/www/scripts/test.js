@@ -1,6 +1,6 @@
 ﻿
 // name - это номера картинок, они повторяются. может быть только ровно два одинаковых имени.
-
+// 
     var state = {
         numClickCard: 0,
         field: {
@@ -56,15 +56,13 @@ function idName(arr,n)
     }   
 }
 //раскладывает карты в начальное состояние(все закрыты)
-
 function deck() {
     radioClick();
     var arr = new Array(), temp = new Array(), temp1, count = 0;
     document.body.innerHTML = '<table id="table"></table>';
     var tr = document.createElement('tr'),
     td = document.createElement('td'),
-    img = document.createElement('img');
-   
+    img = document.createElement('img');  
     
     idName(arr, state.field.width * state.field.heigh);   
 
