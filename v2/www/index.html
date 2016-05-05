@@ -12,18 +12,26 @@
         <meta name="msapplication-tap-highlight" content="no">
         <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
         <link rel="stylesheet" type="text/css" href="css/index.css">
-        <script type="text/javascript" src="scripts/test.js"></script>
+       
        
         <title>v2</title>
     </head>
     <body>
-        <center><h1><input type="button" class="play" value="PLAY" name="play" onclick="play()"/></h1></center>
+        <h1 class="rb1">Select the sizes of a field</h1>
+        <div class="rb">
+            <input type="radio" class="rb" name="r1" value="1">4X4<br>
+            <input type="radio" class="rb" name="r1" value="2">5X4<br>
+            <input type="radio" class="rb" name="r1" value="3">4X3<br>
+            <input type="radio" class="rb" name="r1" value="4">5X6<br>
+            <input type="radio" class="rb" name="r1" value="5">5X8<br>
+        </div>
        
-
+        <center><h1><input type="button" id="p" class="play" value="PLAY" name="play" onclick="initGame()"/></h1></center>
+      
         <table id='table'></table>
-        
- 
 
+
+        <script type="text/javascript" src="scripts/test.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/platformOverrides.js"></script>
         <script type="text/javascript" src="scripts/index.js"></script>
