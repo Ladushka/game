@@ -1,58 +1,60 @@
 body {
     -webkit-touch-callout: none;
     -webkit-text-size-adjust: none;
-    -webkit-user-select: none;    
-    background-image:url("../images/fon.jpg");
+    -webkit-user-select: none;
+    background-image: url("../images/fon.jpg");
     font-family: 'RobotoRegular', 'Droid Sans', 'Segoe UI', Segoe, 'San Francisco', 'Helvetica Neue', Helvetica, Arial, Geneva, sans-serif;
-    font-size:12px;
+    font-size: 12px;
 }
 
 .play {
-
-    vertical-align:middle;
-    height:60px;
-    width:100px;
-    margin-left:auto;
-    margin-right:auto;
-    font-size:20pt;
-    font-family:Mistral;
-    vertical-align:central;
-    font-weight:700;
-    background-color:#801818;
-    -webkit-border-radius:10px;
+    vertical-align: middle;
+    height: 60px;
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20pt;
+    font-family: Mistral;
+    vertical-align: central;
+    font-weight: 700;
+    background-color: #801818;
+    -webkit-border-radius: 10px;
 }
+
 .picture {
-    height:62px;
-    width:62px;
-    -webkit-border-radius:10px;
+    height: 62px;
+    width: 62px;
+    -webkit-border-radius: 10px;
+}
+form[name=selectForm] {
+    color: white;
+    font-weight: 700;
+    font-family: Mistral;
+    text-align: center;
+    font-size: 20pt;
+    align-content: center;
 }
 
-.radButton {
-    color:white;
-    font-weight:700;
-    font-family:Mistral;
-    text-align:center;
-    font-size:20pt;
-    align-content:center;
-}
+
 .selectTitle {
-    font-weight:700;
-    font-family:'Comic Sans MS';
-    color:white;
-    text-align:center;
-    font-style:oblique;
-    font-size:25pt;
+    font-weight: 700;
+    font-family: 'Comic Sans MS';
+    color: white;
+    text-align: center;
+    font-style: oblique;
+    font-size: 25pt;
 }
+
 .app {
-    background: url(../images/cordova.png) no-repeat center top; 
+    background: url(../images/cordova.png) no-repeat center top;
     background-size: contain;
-    position: absolute;             
+    position: absolute;
     left: 50%;
     top: 50%;
-    height: 30px;                  
-    width: 250px;                   
+    height: 30px;
+    width: 250px;
     text-align: center;
-    padding: 200px 0px 0px 0px;     
+    padding: 200px 0px 0px 0px;
     margin: -125px;
 }
 
@@ -73,14 +75,29 @@ body {
 }
 
 @keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
-}
- 
-@-webkit-keyframes fade {
-    from { opacity: 1.0; }
-    50% { opacity: 0.4; }
-    to { opacity: 1.0; }
+    from {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1.0;
+    }
 }
 
+@-webkit-keyframes fade {
+    from {
+        opacity: 1.0;
+    }
+
+    50% {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1.0;
+    }
+}

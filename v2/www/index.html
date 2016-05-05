@@ -1,34 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-   
-        <meta http-equiv="Content-Security-Policy" content="script-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline'; style-src 'self'; media-src *">
-        
-        <meta name="format-detection" content="telephone=no">
-        <meta name="msapplication-tap-highlight" content="no">
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
-        <link rel="stylesheet" type="text/css" href="css/index.css">
-       
-       
-        <title>v2</title>
-    </head>
-    <body>
-        <h1 class="selectTitle">Select the sizes of a field</h1>
-        <form name="RAD">
-        <div class="radButton">
-            <input type="radio" name="r1" data-width="4" data-heigh="4" >4X4<br>
-            <input type="radio" name="r1" data-width="5" data-heigh="4" >5X4<br>
-            <input type="radio" name="r1" data-width="4" data-heigh="3" >4X3<br>
-            <input type="radio" name="r1" data-width="5" data-heigh="6" >5X6<br>
-            <input type="radio" name="r1" data-width="5" data-heigh="8" >5X8<br>
-        </div>
-        </form>
-        <center><h1><input type="button" id="p" class="play" value="PLAY" name="play" onclick="initGame()"/></h1></center>
-      
-        <script type="text/javascript" src="scripts/test.js"></script>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="scripts/platformOverrides.js"></script>
-        <script type="text/javascript" src="scripts/index.js"></script>
-    </body>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline'; style-src 'self'; media-src *">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+
+
+    <title>v2</title>
+</head>
+<body>
+    <h1 class="selectTitle">Select the sizes of a field</h1>
+    <form name="selectForm" onsubmit="initGame(); return false;">
+        <input type="radio" name="r1" data-width="4" data-heigh="4">4X4<br>
+        <input type="radio" name="r1" data-width="5" data-heigh="4">5X4<br>
+        <input type="radio" name="r1" data-width="4" data-heigh="3">4X3<br>
+        <input type="radio" name="r1" data-width="5" data-heigh="6">5X6<br>
+        <input type="radio" name="r1" data-width="5" data-heigh="8">5X8<br>
+        <input type="submit" class="play" value="PLAY" name="play" />
+    </form>
+
+
+    <script type="text/javascript" src="scripts/test.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="scripts/platformOverrides.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
+</body>
 </html>
