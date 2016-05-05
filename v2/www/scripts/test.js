@@ -70,7 +70,6 @@ function initGame() {
     state.pictures = document.getElementsByClassName('picture');
 }
 
-
 function retIndex(el) {
     for (var i = 0; i < state.pictures.length; i++) {
         if (state.pictures[i].id === el) {
@@ -79,14 +78,13 @@ function retIndex(el) {
     }
 }
 
-
 function downCard() {
     //переварачивает карты, если не совпали   
     state.pictures[retIndex(state.id1)].style.backgroundImage = "url('images/down.jpg')";
     state.pictures[retIndex(state.id2)].style.backgroundImage = "url('images/down.jpg')";
     state.cards[retIndex(state.id1)].status = false;
 }
-//ещё один тест
+
 function coupleOfCards() {
 
     window.alert = navigator.notification.alert;
