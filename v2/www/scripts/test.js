@@ -1,23 +1,18 @@
 ﻿
     var state = {
         numClickCard: 0,
-        field: {
-            width: undefined,
-            heigh: undefined
-        },
         cards: [],
         pictures: [],
         id1: undefined,
         id2: undefined
     }
 
-
-
     function Card(cardID, status) {
         this.status = status;//состояние карточки(нажата/не нажата)
         this.l = cardID;//id (номер картинки)
         this.name = name;
     }
+
     //массив соответствия id и name
     function idName(arr, n) {
         for (var i = 1; i <= n; i++) {
@@ -31,16 +26,13 @@
     }
     //раскладывает карты в начальное состояние(все закрыты)
     function initGame() {
-        var data,width,heigh;
-      
-        for (var i = 0; i < 5; i++) {
+       var width, heigh;     
+       for (var i = 0; i < 5; i++) {
             if (document.RAD.r1[i].checked) {
-                data = document.RAD.r1[i].dataset;
-                width = data.width;
-                heigh = data.heigh;
+                width = document.RAD.r1[i].dataset.width;
+                heigh = document.RAD.r1[i].dataset.heigh;
             }
         }
-        //radioClick();
        
         var arr = new Array(), temp = new Array(), temp1, count = 0;
         document.body.innerHTML = '<table id="table"></table>';
@@ -61,7 +53,7 @@
                 td = document.createElement("td");
                 img = document.createElement('img');
                 img.style.backgroundImage = "url('images/down.jpg')";
-                img.className = 'pic';
+                img.className = 'picture';
                 img.addEventListener("click", coupleOfCards);
                 temp1 = Math.floor(Math.random() * (temp.length));
                 img.id = temp[temp1];//присваивает случайные id
@@ -75,7 +67,7 @@
             }
             table.appendChild(tr);
         }
-        state.pictures = document.getElementsByClassName('pic');
+        state.pictures = document.getElementsByClassName('picture');
     }
 
 

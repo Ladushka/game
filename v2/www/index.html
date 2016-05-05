@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html>
     <head>
-<meta http-equiv="Content-Type" content="text/html; charset=windows-1251"/>
-    <!--
-        Настройте политику безопасности содержимого в метатеге ниже. Добавьте "unsafe-inline" к default-src, чтобы включить встроенный код JavaScript.
-        Дополнительные сведения см. по ссылке http://go.microsoft.com/fwlink/?LinkID=617521
-    -->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+   
         <meta http-equiv="Content-Security-Policy" content="script-src 'self' data: gap: https://ssl.gstatic.com 'unsafe-inline'; style-src 'self'; media-src *">
         
         <meta name="format-detection" content="telephone=no">
@@ -17,14 +14,14 @@
         <title>v2</title>
     </head>
     <body>
-        <h1 class="rb1">Select the sizes of a field</h1>
+        <h1 class="selectTitle">Select the sizes of a field</h1>
         <form name="RAD">
-        <div class="rb">
-            <input type="radio" class="rb" name="r1" data-width="4" data-heigh="4" >4X4<br>
-            <input type="radio" class="rb" name="r1" data-width="5" data-heigh="4" >5X4<br>
-            <input type="radio" class="rb" name="r1" data-width="4" data-heigh="3" >4X3<br>
-            <input type="radio" class="rb" name="r1" data-width="5" data-heigh="6" >5X6<br>
-            <input type="radio" class="rb" name="r1" data-width="5" data-heigh="8" >5X8<br>
+        <div class="radButton">
+            <input type="radio" name="r1" data-width="4" data-heigh="4" >4X4<br>
+            <input type="radio" name="r1" data-width="5" data-heigh="4" >5X4<br>
+            <input type="radio" name="r1" data-width="4" data-heigh="3" >4X3<br>
+            <input type="radio" name="r1" data-width="5" data-heigh="6" >5X6<br>
+            <input type="radio" name="r1" data-width="5" data-heigh="8" >5X8<br>
         </div>
         </form>
         <center><h1><input type="button" id="p" class="play" value="PLAY" name="play" onclick="initGame()"/></h1></center>

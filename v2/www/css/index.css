@@ -21,27 +21,27 @@ body {
     background-color:#801818;
     -webkit-border-radius:10px;
 }
-.pic {
-height:62px;
-width:62px;
- -webkit-border-radius:10px;
+.picture {
+    height:62px;
+    width:62px;
+    -webkit-border-radius:10px;
 }
-.rb {
+
+.radButton {
     color:white;
     font-weight:700;
     font-family:Mistral;
-text-align:center;
-font-size:20pt;
-align-content:center;
-
+    text-align:center;
+    font-size:20pt;
+    align-content:center;
 }
-.rb1 {
+.selectTitle {
     font-weight:700;
     font-family:'Comic Sans MS';
     color:white;
-text-align:center;
-font-style:oblique;
-font-size:25pt;
+    text-align:center;
+    font-style:oblique;
+    font-size:25pt;
 }
 .app {
     background: url(../images/cordova.png) no-repeat center top; 
@@ -84,8 +84,3 @@ font-size:25pt;
     to { opacity: 1.0; }
 }
 
-@media screen and (orientation: portrait) {
-}
-
-@media screen and (orientation: landscape) {
-}
