@@ -18,19 +18,17 @@
     </head>
     <body>
         <h1 class="rb1">Select the sizes of a field</h1>
+        <form name="RAD">
         <div class="rb">
-            <input type="radio" class="rb" name="r1" value="1">4X4<br>
-            <input type="radio" class="rb" name="r1" value="2">5X4<br>
-            <input type="radio" class="rb" name="r1" value="3">4X3<br>
-            <input type="radio" class="rb" name="r1" value="4">5X6<br>
-            <input type="radio" class="rb" name="r1" value="5">5X8<br>
+            <input type="radio" class="rb" name="r1" data-width="4" data-heigh="4" >4X4<br>
+            <input type="radio" class="rb" name="r1" data-width="5" data-heigh="4" >5X4<br>
+            <input type="radio" class="rb" name="r1" data-width="4" data-heigh="3" >4X3<br>
+            <input type="radio" class="rb" name="r1" data-width="5" data-heigh="6" >5X6<br>
+            <input type="radio" class="rb" name="r1" data-width="5" data-heigh="8" >5X8<br>
         </div>
-       
+        </form>
         <center><h1><input type="button" id="p" class="play" value="PLAY" name="play" onclick="initGame()"/></h1></center>
       
-        <table id='table'></table>
-
-
         <script type="text/javascript" src="scripts/test.js"></script>
         <script type="text/javascript" src="cordova.js"></script>
         <script type="text/javascript" src="scripts/platformOverrides.js"></script>

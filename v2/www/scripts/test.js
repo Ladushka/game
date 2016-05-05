@@ -12,25 +12,6 @@
     }
 
 
-    function radioClick() {
-        var n;
-        var radios = document.getElementsByName("r1");
-
-        for (var i = 0; i < radios.length; i++) {
-            if (radios[i].type == "radio") {
-                if (radios[i].checked) {
-
-                    switch (i + 1) {
-                        case 1: state.field.width = 4; state.field.heigh = 4; break;
-                        case 2: state.field.width = 5; state.field.heigh = 4; break;
-                        case 3: state.field.width = 4; state.field.heigh = 3; break;
-                        case 4: state.field.width = 5; state.field.heigh = 6; break;
-                        case 5: state.field.width = 5; state.field.heigh = 8; break;
-                    }
-                }
-            }
-        }
-    }
 
     function Card(cardID, status) {
         this.status = status;//состояние карточки(нажата/не нажата)
@@ -50,22 +31,32 @@
     }
     //раскладывает карты в начальное состояние(все закрыты)
     function initGame() {
-        radioClick();
+        var data,width,heigh;
+      
+        for (var i = 0; i < 5; i++) {
+            if (document.RAD.r1[i].checked) {
+                data = document.RAD.r1[i].dataset;
+                width = data.width;
+                heigh = data.heigh;
+            }
+        }
+        //radioClick();
+       
         var arr = new Array(), temp = new Array(), temp1, count = 0;
         document.body.innerHTML = '<table id="table"></table>';
         var tr = document.createElement('tr'),
         td = document.createElement('td'),
         img = document.createElement('img');
 
-        idName(arr, state.field.width * state.field.heigh);
+        idName(arr, width * heigh);
 
-        for (var i = 0; i < state.field.width * state.field.heigh; i++) {
+        for (var i = 0; i < width * heigh; i++) {
             temp[i] = i + 1;//номера id
         }
 
-        for (var i = 0; i < state.field.heigh; i++) {
+        for (var i = 0; i < heigh; i++) {
             tr = document.createElement("tr");
-            for (var j = 0; j < state.field.width; j++) {
+            for (var j = 0; j <width; j++) {
                 //создаёт поле
                 td = document.createElement("td");
                 img = document.createElement('img');
